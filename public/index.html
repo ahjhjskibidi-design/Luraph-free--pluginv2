@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lua Obf — Lua Obfuscator for Roblox</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="mark"></span>
+    <span class="name">Lua Obf</span>
+  </div>
+  <nav>
+    <a href="/docs">Docs</a>
+    <a href="https://github.com/YOUR_USERNAME/lua-obf" target="_blank">GitHub</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>Lua obfuscator for Roblox.</h1>
+  <p class="lede">Paste a script. Pick a preset. Get back something no one wants to read.</p>
+</section>
+
+<section class="controls">
+  <div class="preset-group" role="radiogroup" aria-label="Obfuscation preset">
+    <button type="button" class="preset" data-preset="light">Light</button>
+    <button type="button" class="preset active" data-preset="medium">Medium</button>
+    <button type="button" class="preset" data-preset="heavy">Heavy</button>
+  </div>
+  <div class="actions">
+    <button type="button" id="btn-obfuscate" class="btn primary">Obfuscate</button>
+    <button type="button" id="btn-copy" class="btn ghost" disabled>Copy</button>
+    <button type="button" id="btn-download" class="btn ghost" disabled>Download .lua</button>
+    <button type="button" id="btn-clear" class="btn ghost">Clear</button>
+  </div>
+</section>
+
+<section class="panels">
+  <div class="panel">
+    <div class="panel-head">
+      <span>Input — Lua</span>
+      <span id="input-stats" class="stats">0 chars</span>
+    </div>
+    <textarea id="input" spellcheck="false" placeholder="-- Paste your Lua script here
+local function greet(name)
+  return &quot;Hello, &quot; .. name
+end
+print(greet(&quot;Roblox&quot;))"></textarea>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <span>Output — Obfuscated</span>
+      <span id="output-stats" class="stats">—</span>
+    </div>
+    <textarea id="output" spellcheck="false" readonly placeholder="Result appears here..."></textarea>
+  </div>
+</section>
+
+<section class="meta">
+  <div class="meta-row">
+    <span class="label">Preset</span>
+    <span id="meta-preset" class="value">Medium</span>
+  </div>
+  <div class="meta-row">
+    <span class="label">Input size</span>
+    <span id="meta-input" class="value">—</span>
+  </div>
+  <div class="meta-row">
+    <span class="label">Output size</span>
+    <span id="meta-output" class="value">—</span>
+  </div>
+  <div class="meta-row">
+    <span class="label">Ratio</span>
+    <span id="meta-ratio" class="value">—</span>
+  </div>
+  <div class="meta-row">
+    <span class="label">Time</span>
+    <span id="meta-time" class="value">—</span>
+  </div>
+</section>
+
+<section class="notice">
+  <strong>Note:</strong> obfuscation slows attackers, it does not stop them. Every obfuscator can be reversed. Never put API keys or secrets in a client script. See <a href="/docs">docs</a>.
+</section>
+
+</main>
+
+<footer>
+  <span>MIT licensed.</span>
+  <span id="status" class="status">Ready</span>
+</footer>
+
+<script src="/app.js"></script>
+
+</body>
+</html>

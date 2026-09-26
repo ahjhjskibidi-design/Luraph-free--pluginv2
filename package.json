@@ -1,0 +1,28 @@
+{
+  "name": "lua-obf",
+  "version": "1.0.0",
+  "description": "A Lua obfuscator for Roblox scripts. Multi-layer transformation, VM-based output, anti-tamper.",
+  "keywords": [
+    "lua",
+    "obfuscator",
+    "roblox",
+    "luau",
+    "security",
+    "protection"
+  ],
+  "license": "MIT",
+  "author": "Jonhcena2988",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}
